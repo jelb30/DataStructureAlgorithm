@@ -6,28 +6,31 @@ import java.util.List;
 
 public class ArrayPermutations {
 
-    List<List<Integer>> listInteger;
+    List<List<Integer>> listInteger; // Stores all generated permutations
 
-    public void implementation(int[] nums){
+    public void implementation(int[] nums) {
         this.listInteger = new ArrayList<>();
         permutation(new ArrayList<>(), nums);
     }
 
-    public void permutation(List<Integer> processed,int[] unprocessed){
+    public void permutation(List<Integer> processed, int[] unprocessed) {
 
-        if(unprocessed.length==0){
+        // Base case: If there are no more numbers to process, store the permutation
+        if (unprocessed.length == 0) {
             this.listInteger.add(processed);
             return;
         }
 
-        int firstInt = unprocessed[0];
+        int firstInt = unprocessed[0]; // First element to be inserted in 'processed'
 
-        for (int i = 0; i <=processed.size(); i++) {
-            List<Integer> prefixList = new ArrayList<>(processed.subList(0, i));
-            prefixList.add(firstInt);
-            prefixList.addAll(processed.subList(i, processed.size()));
+        // Insert 'firstInt' at every position in 'processed' to generate permutations
+        for (int i = 0; i <= processed.size(); i++) {
+            List<Integer> prefixList = new ArrayList<>(processed.subList(0, i)); // Part before insertion
+            prefixList.add(firstInt); // Insert the current element
+            prefixList.addAll(processed.subList(i, processed.size())); // Add remaining elements
+
+            // Recursive call with the updated 'processed' and the remaining 'unprocessed'
             permutation(prefixList, Arrays.copyOfRange(unprocessed, 1, unprocessed.length));
         }
-
     }
 }

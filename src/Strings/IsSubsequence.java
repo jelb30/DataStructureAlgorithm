@@ -2,27 +2,34 @@ package Strings;
 
 public class IsSubsequence {
 
-    public void implmentation(String test, String main){
+    public void implmentation(String test, String main) {
         boolean validate = isSubSeq(test, main);
         System.out.println(validate);
     }
 
-    public boolean isSubSeq(String test, String main){
+    public boolean isSubSeq(String test, String main) {
         int mainLen = main.length();
         int testLen = test.length();
-        if(testLen<1){
+
+        // An empty 'test' string is always a subsequence
+        if (testLen < 1) {
             return true;
         }
-        int testIndex = 0;
+
+        int testIndex = 0;  // Pointer to track position in 'test'
 
         for (int i = 0; i < mainLen; i++) {
-            if(test.charAt(testIndex) == main.charAt(i)){
+            // If characters match, move to the next character in 'test'
+            if (test.charAt(testIndex) == main.charAt(i)) {
                 testIndex++;
-                if(testIndex>=testLen){
+
+                // If all characters in 'test' are found in order, return true
+                if (testIndex >= testLen) {
                     return true;
                 }
             }
         }
+        // If we finish iterating through 'main' without finding all 'test' characters, return false
         return false;
     }
 }
