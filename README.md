@@ -8,7 +8,7 @@ This is my personal journey through the world of Data Structures & Algorithms. I
 - **Algorithms:** Sorting, searching, graph traversal—you name it.
 - **LeetCode Solutions:** A steadily growing archive of my attempts, successes, and the occasional debugging marathon.
 
-## 🗺 Repository Layout
+##  Repository Layout
 ### Data Structures
 - **Arrays**
 - **Linked Lists**
