@@ -7,6 +7,9 @@ This is my personal journey through the world of Data Structures & Algorithms. I
 - **Data Structures:** From arrays to trees, all crafted in Java.
 - **Algorithms:** Sorting, searching, graph traversal—you name it.
 - **LeetCode Solutions:** A steadily growing archive of my attempts, successes, and the occasional debugging marathon.
+- **Organized Solutions** – Each problem has its own Java file, neatly categorized (or at least I think).  
+- **Clean & Readable Code** – Well… I try my best. No promises.  
+- **Regular Updates** – Because consistency is key (and so is my willpower, at least till last commit!).
 
 ##  Repository Layout
 ### Data Structures
@@ -16,4 +19,4 @@ This is my personal journey through the world of Data Structures & Algorithms. I
 - **Trees & Graphs**
 
 ### LeetCode Solutions
-A collection of my problem-solving adventures on LeetCode. Each solution tells its own tale of perseverance, sleepless nights, and those satisfying “Eureka!” moments.
+A collection of my LeetCode problem-solving escapades, where each solution represents a thrilling tale of caffeine-fueled late nights, existential crises, and the occasional 'ahaaa!' moment that makes it all worthwhile.
