@@ -102,13 +102,13 @@ public class LetterCombinationPN {
         int arraycount =0;
         for(char c: digits.substring(1).toCharArray()){
             int charInt = Integer.parseInt(String.valueOf(c));
-            String mappedStr = this.keypadMap.get(charInt);
+            String mappedStr = this.keypadMap.get(charInt); // TAKING THE MAPPED STRING!
 
             int finalListSize = finalList.size();
             int temp =0;
 
-            for (int i = 0; i < mappedStr.length(); i++) {
-                for (int j= arraycount; j < finalListSize; j++) {
+            for (int i = 0; i < mappedStr.length(); i++) { // FOR EVERY CHARACTER IN STRING!
+                for (int j= arraycount; j < finalListSize; j++) { // ADDING EACH CHARACTER TO THE LISTS!
                     String tempStr = finalList.get(j);
                     tempStr = tempStr + String.valueOf(mappedStr.charAt(i));
                     temp++;
@@ -130,7 +130,7 @@ public class LetterCombinationPN {
 
     }
 
-    //NOT THAT OPTIMAL!
+    // RECURSIVE BUT NOT THAT OPTIMAL!
     public void combinationsRecursion(String processed, String unprocessed){
 
 

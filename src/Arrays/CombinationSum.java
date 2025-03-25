@@ -1,21 +1,27 @@
 package Arrays;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.IntStream;
 
+// MEANS WE CAN USE NUMBERS MULTIPLE TIMES TO FORM THE SUM!
 public class CombinationSum {
 
     public int[] candidates;
 
     public void implmentation(int[] candidates, int target){
         this.candidates = candidates;
+        Arrays.sort(this.candidates);
 
-        List<List<Integer>> potentialCandidates = combinationSum(new ArrayList<>(), target);
+        List<List<Integer>> potentialCandidates = new ArrayList<>();
+
+        combinationSum2Index(potentialCandidates, new ArrayList<>(), target, 0);
+
+
 
         for (List<Integer> list : potentialCandidates) {
             System.out.println("Potential Candidates: " + list);
         }
+
 
     }
 
@@ -65,5 +71,32 @@ public class CombinationSum {
     }
 
 
+    // ACTUAL SOLUTION THAT WORKED!
+    // EXPECT SORTED ARRAY! SO WE SORT THE ARRAY BEFORE THIS FUNCTION!
+    public void combinationSum2Index(List<List<Integer>> finalList, List<Integer> processed, int target, int index){
+
+        if(target==0){
+            finalList.add(new ArrayList<>(processed));
+            return ;
+        }
+
+        for (int i = index ; i < this.candidates.length; i++) {
+
+            int currentNum = this.candidates[i];
+
+            // REMOVING ALL THE DUPLICATES!
+            if(i > index && currentNum == this.candidates[i-1]){
+                continue;
+            }
+
+            // LIST IS SORTED SO THERE WONT BE ANY MEANING TO TRAVERSE FURTHER!
+            if(currentNum> target) break;
+
+            processed.add(currentNum);
+            combinationSum2Index(finalList, processed, target - currentNum, i+1);
+            processed.remove(processed.size() - 1);
+
+        }
+    }
 
 }
