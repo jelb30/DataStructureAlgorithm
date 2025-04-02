@@ -1,4 +1,4 @@
-package Arrays;
+package Recursion;
 
 public class SudokuSolver {
 

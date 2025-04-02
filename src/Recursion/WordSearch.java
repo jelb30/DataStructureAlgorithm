@@ -1,6 +1,5 @@
-package Arrays;
+package Recursion;
 
-import javax.swing.event.ListSelectionEvent;
 import java.util.*;
 
 public class WordSearch {

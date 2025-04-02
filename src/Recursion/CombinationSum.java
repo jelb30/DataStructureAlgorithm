@@ -1,7 +1,6 @@
-package Arrays;
+package Recursion;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
 // MEANS WE CAN USE NUMBERS MULTIPLE TIMES TO FORM THE SUM!
 public class CombinationSum {
