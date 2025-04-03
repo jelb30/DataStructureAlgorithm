@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Easy;
 
 public class PowerOfProblem {
     public boolean isPowerOfThree(int n){
