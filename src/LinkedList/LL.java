@@ -41,8 +41,14 @@ public class LL {
         node.next = temp;
     }
 
-    public void insertAtIndex(int index, int value){
+    public Node getHead() {
+        return head;
+    }
 
+    public void insertAtIndex(int index, int value){
+        if(index > size+1){
+            throw new RuntimeException("WRONG INDEX!");
+        }
         if(index==0){
             addAtFirst(value);
             size++;
@@ -105,14 +111,26 @@ public class LL {
         return tempNode.getValue();
     }
 
+    public Node getNode(int index){
+        if(index>size-1){
+            throw new RuntimeException("INVALID INDEX!");
+        }
+        Node tempNode = head;
+        for (int i = 0; i < index; i++) {
+            tempNode = tempNode.getNext();
+        }
+
+        return tempNode;
+    }
+
     public int getSize() {
         return size;
     }
 
-    public class Node {
+    public static class Node {
 
-        private int value;
-        private Node next;
+        public  int value;
+        public  Node next;
 
         public Node(int value){
             this.value = value;
@@ -130,5 +148,12 @@ public class LL {
         public int getValue() {
             return value;
         }
+    }
+
+    public class ListNode{
+        int val;
+        public ListNode next;
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }
