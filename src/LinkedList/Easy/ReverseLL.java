@@ -21,6 +21,7 @@ public class ReverseLL {
         return getLast(head.next);
     }
 
+    // RECURSIVE APPROACH!
     public static ListNode reverseList(ListNode head) {
         if(head==null){
             return head;
@@ -28,6 +29,28 @@ public class ReverseLL {
         ListNode last = getLast(head);
         reverse(head);
         return last;
+    }
+
+    public static ListNode reverseListIter(ListNode head){
+        if(head == null || head.next ==null){
+            return head;
+        }
+
+        ListNode prev = null;
+        ListNode current = head;
+
+        while(current.next != null){
+
+            ListNode tempNext = current.next;
+
+            current.next = prev;
+            prev = current;
+            current = tempNext;
+
+        }
+        current.next = prev;
+
+        return current;
     }
 
     public static ListNode reverse(ListNode head){
@@ -51,21 +74,14 @@ public class ReverseLL {
         ListNode l4 = new ListNode(2, l3);
         ListNode l5 = new ListNode(1, l4);
 
-        //GETTING TAIL TO RETURN AS HEAD AFTER REVERAL.
-        ListNode tail = getLast(l5);
-
-        System.out.println("BEFORE REVERSEAL: ");
         display(l5);
-
-        reverseList(l5); // REVERSAL LOGIC USING RECURSION.
-
-        System.out.println("AFTER REVERSAL:");
-        display(tail);
+        display(reverseListIter(l5));
     }
 
     public static void display(ListNode head){
         if(head==null){
             System.out.print("null");
+            System.out.println();
             return;
         }
         System.out.print(head.val+" -> ");

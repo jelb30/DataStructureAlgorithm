@@ -15,8 +15,6 @@ public class CombinationSum {
 
         combinationSum2Index(potentialCandidates, new ArrayList<>(), target, 0);
 
-
-
         for (List<Integer> list : potentialCandidates) {
             System.out.println("Potential Candidates: " + list);
         }
@@ -96,22 +94,5 @@ public class CombinationSum {
             processed.remove(processed.size() - 1);
 
         }
-    }
-
-    public static class Factorial {
-
-        public void Implementation(){
-            int n = 19;
-            int factorialVal = factorialByRecursion(n);
-            System.out.println(factorialVal);
-        }
-
-        public int factorialByRecursion(int n){
-            if(n ==0){
-                return 1;
-            }
-            return n*factorialByRecursion(n-1);
-        }
-
     }
 }

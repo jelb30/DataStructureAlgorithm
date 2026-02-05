@@ -5,12 +5,14 @@ import java.util.List;
 
 public class SubsetPalindrome {
 
+
     public void implementation(String str){
 
         SubSequence subSequence = new SubSequence();
         List<String> subsetList = subSequence.subseqArr("", str);
 
-        int count =0;
+        int maxLength=0;
+        String largestSubseq = "";
         for (String substring: subsetList){
             String rev = "";
             for (int i = substring.length()-1; i >= 0 ; i--) {
@@ -18,9 +20,14 @@ public class SubsetPalindrome {
             }
             if(substring.compareTo(rev)==0){
                 System.out.println("Substring Palindrome: "+substring);
-                count+=1;
+                if( substring.length() > maxLength){
+                    largestSubseq = substring;
+                    maxLength = substring.length();
+                }
             }
         }
+
+        System.out.println(largestSubseq);
     }
 
     public List<String> subseqArr(String processed, String unprocessed){
