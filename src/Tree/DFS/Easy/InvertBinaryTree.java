@@ -1,4 +1,4 @@
-package Tree.common.Easy;
+package Tree.DFS.Easy;
 import Tree.common.TreeNode;
 import Tree.common.BT;
 
@@ -8,7 +8,7 @@ public class InvertBinaryTree {
     public static void main(String[] args) {
         TreeNode root = BT.fromLevelOrder(4,2,7,1,3,6,9);
         TreeNode Node = invertBinaryTree(root);
-        BT.print(Node);
+        BT.printLeetCodeArray(Node);
     }
 
     public static TreeNode invertBinaryTree(TreeNode root) {

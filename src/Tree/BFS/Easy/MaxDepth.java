@@ -1,4 +1,4 @@
-package Tree.common.Easy;
+package Tree.BFS.Easy;
 
 import Tree.common.BT;
 import Tree.common.TreeNode;
