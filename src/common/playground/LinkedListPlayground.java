@@ -1,10 +1,10 @@
 package common.playground;
 
 import common.list.SinglyLinkedList;
-import problems.linked_list.fast_slow.LC0141LinkedListCycle;
-import problems.linked_list.merge_sort.LC0021MergeTwoSortedLists;
-import problems.linked_list.deduplication.LC0083RemoveDuplicatesFromSortedList;
-import problems.linked_list.pointer_manipulation.LC0328OddEvenLinkedList;
+import problems.fast_slow_pointers.LC0141LinkedListCycle;
+import problems.linked_list_manipulation.LC0021MergeTwoSortedLists;
+import problems.linked_list_manipulation.LC0083RemoveDuplicatesFromSortedList;
+import problems.linked_list_manipulation.LC0328OddEvenLinkedList;
 
 public class LinkedListPlayground {
 

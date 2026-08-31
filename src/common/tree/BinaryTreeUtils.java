@@ -3,7 +3,7 @@ package common.tree;
 import java.util.*;
 
 public final class BinaryTreeUtils {
-    private BinaryTreeUtils() {}
+    public BinaryTreeUtils() {}
 
     // Build tree from level order like LeetCode:
     // fromLevelOrder(1,2,3,null,4) => [1,2,3,null,4]

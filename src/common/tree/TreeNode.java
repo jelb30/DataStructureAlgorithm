@@ -14,5 +14,4 @@ public class TreeNode {
         this.right = right;
         this.next = null;
     }
-
 }

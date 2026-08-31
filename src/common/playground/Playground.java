@@ -1,9 +1,9 @@
 package common.playground;
 
 
-import problems.backtracking.subsets.StringSubsequence;
-import problems.backtracking.subsets.SubsetPalindrome;
-import problems.strings.palindrome.LC0005LongestPalindromicSubstring;
+import problems.backtracking.StringSubsequence;
+import problems.backtracking.SubsetPalindrome;
+import problems.two_pointers.LC0005LongestPalindromicSubstring;
 
 public class Playground {
 
