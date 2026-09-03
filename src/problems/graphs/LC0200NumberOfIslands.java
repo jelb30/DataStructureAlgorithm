@@ -1,10 +1,6 @@
 package problems.graphs;
 public class LC0200NumberOfIslands {
 
-    public static void main(String[] args) {
-
-    }
-
     public static int numIslands(char[][] grid) {
 
         int islands = 0;

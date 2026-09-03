@@ -12,7 +12,6 @@ public class LC0994RottingOranges {
 
         System.out.println(orangesRotting(grid));
         //System.out.println(orangesRotting(test2));
-
     }
 
     //BFS For the rotting oranges with rotted oranges in Queue

@@ -10,7 +10,6 @@ public class LC1091ShortestPathInBinaryMatrix {
         int[][] grid = {{0,0,0}, {1,1,0}, {1,1,0}};
         int shortestPath = shortestPathBinaryMatrix(grid);
         System.out.println(shortestPath);
-
     }
 
     public static int shortestPathBinaryMatrix(int[][] grid) {
